@@ -127,6 +127,15 @@ rather than silently skipping the rule sweep.
 Files that landed in `unknown` (step 2) won't match any domain — list them under "Not
 categorized — manual review recommended."
 
+**Deeper pass (optional, higher confidence).** For a large or security-sensitive diff, or
+when the rule-cluster sweep feels too coarse, invoke `workflows/audit-deep.js` instead. It
+reviews **each changed file individually** against its category's project rules, **runs the
+detected gates itself**, and refutes every finding with a **3-skeptic panel** to kill false
+positives — slower and heavier (one reviewer per file + three verifiers per finding), but
+the highest-confidence option. Same `args` shape; it returns
+`{ scope, gates, findings, droppedCount }`. Fold its `findings` in the same way — and since
+it runs the gates internally, you can skip re-running them in step 3 if you lead with it.
+
 ### 5. Commit-level checks
 
 ```bash

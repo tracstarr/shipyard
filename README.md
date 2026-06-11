@@ -23,13 +23,14 @@ project — it adapts to whatever you point it at.
 | `shipyard:local-reset` | Destructive wipe + rebuild of the local dev environment. |
 | `shipyard:handoff` | Pause-endgame — leave a clean, resumable state in the tracking issue. |
 
-**Four bundled workflows** (parallel, report-only fan-outs, under `workflows/`):
+**Five bundled workflows** (parallel, report-only fan-outs, under `workflows/`):
 
 | Workflow | Does |
 |---|---|
 | `test-gap.js` | Finds missing unit/integration/e2e coverage on the branch diff. |
 | `doc-gap.js` | Finds missing/stale docs (changelog, rule-file sync, topic docs, how-to, API docs). |
 | `audit.js` | Audits the diff against the project's **own** documented rules, clustered into domains. |
+| `audit-deep.js` | Heavier audit: runs the gates + one reviewer per changed file + a 3-vote refutation panel per finding. |
 | `rule-coverage.js` | Meta-audit: maps each documented rule to the mechanism that actually enforces it. |
 
 ## How it adapts to a project (no config file)
@@ -67,7 +68,7 @@ Then just talk to it: *"deliver this from issue #123 to a green PR"*, *"audit my
 ## The bundled workflows & `$CLAUDE_PLUGIN_ROOT`
 
 Claude Code plugins can bundle **skills**, but **not** dynamic workflows as a first-class
-component. So Shipyard ships the four `.js` workflows as plugin resources under
+component. So Shipyard ships the five `.js` workflows as plugin resources under
 `workflows/`, and the skills invoke them **by absolute path**:
 
 ```
@@ -97,7 +98,7 @@ skills/
   code-audit/SKILL.md        ship-pr/SKILL.md     local-reset/SKILL.md
   handoff/SKILL.md
 workflows/
-  test-gap.js   doc-gap.js   audit.js   rule-coverage.js
+  test-gap.js   doc-gap.js   audit.js   audit-deep.js   rule-coverage.js
 ```
 
 ## Requirements
