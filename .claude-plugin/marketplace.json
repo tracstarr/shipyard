@@ -1,0 +1,25 @@
+{
+  "name": "shipyard",
+  "owner": {
+    "name": "tracstarr",
+    "email": "tracstarr@hotmail.com",
+    "url": "https://github.com/tracstarr"
+  },
+  "description": "Shipyard — a portable feature-delivery lifecycle plugin for Claude Code. This repository is its own single-plugin marketplace.",
+  "plugins": [
+    {
+      "name": "shipyard",
+      "source": "./",
+      "description": "Drive any repo from idea → issue → plan → code → tests → runtime evidence → docs → review → green PR. Seven skills + four bundled workflows that autodetect the project's stack and rules.",
+      "version": "0.1.0",
+      "license": "MIT",
+      "keywords": [
+        "lifecycle",
+        "delivery",
+        "code-review",
+        "audit",
+        "pull-request"
+      ]
+    }
+  ]
+}

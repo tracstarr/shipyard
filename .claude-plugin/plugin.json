@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "shipyard",
+  "displayName": "Shipyard",
+  "version": "0.1.0",
+  "description": "Portable feature-delivery lifecycle. Drive any repo from idea → issue → plan → code → tests → runtime evidence → docs → review → green PR. Autodetects each project's stack, commands, and documented rules at runtime — no per-project config.",
+  "author": {
+    "name": "tracstarr",
+    "email": "tracstarr@hotmail.com"
+  },
+  "homepage": "https://github.com/tracstarr/shipyard",
+  "repository": "https://github.com/tracstarr/shipyard",
+  "license": "MIT",
+  "keywords": [
+    "lifecycle",
+    "delivery",
+    "orchestration",
+    "code-review",
+    "audit",
+    "testing",
+    "ci",
+    "pull-request",
+    "preflight"
+  ]
+}

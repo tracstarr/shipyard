@@ -1,0 +1,14 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*~
+.idea/
+.vscode/
+*.swp
+
+# Node (only if a contributor runs tooling here; the plugin ships no build)
+node_modules/
+
+# Local scratch
+*.log
+/tmp/
