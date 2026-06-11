@@ -30,8 +30,8 @@ of truth for "how this project wants work done":
 4. `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `README.md`.
 5. `docs/` — architecture, ADRs, coding standards, per-feature docs.
 
-If the project has a **numbered or named list of non-negotiable rules** (like Winnow's
-"25 non-negotiables"), capture it: that list is the rule source the `audit` and
+If the project has a **numbered or named list of non-negotiable rules** (some projects
+keep an explicit, numbered set), capture it: that list is the rule source the `audit` and
 `rule-coverage` workflows audit against. If there is no such list, the rules are
 whatever these files state in prose plus the conventions visible in the code.
 

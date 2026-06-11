@@ -6,9 +6,8 @@ from idea → issue → plan → code → tests → runtime evidence → docs �
 (by reading the repo's `CLAUDE.md`/`AGENTS.md` and autodetecting its manifests), so there's
 no per-project config to maintain.
 
-It started as a Winnow-specific family of skills and was extracted, genericized, and
-packaged so the same lifecycle works on a .NET repo, a Node app, a Rust service, a Python
-project — whatever you point it at.
+The same lifecycle works on a .NET repo, a Node app, a Rust service, or a Python
+project — it adapts to whatever you point it at.
 
 ## What's in the box
 
